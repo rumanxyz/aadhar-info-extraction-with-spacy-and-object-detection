@@ -9,6 +9,7 @@
 <h2>Different Approach</h2>
 <p>There are two possible approaches to which we can choose. Either extract information by building a NER model or go with the Object detection approach. I'll give a summary of both methods.</p>
 <h2>1. Extract Aadhar info through NER</h2>
+<a href="https://github.com/rumankhan1/gov-id-info-extraction-with-spacy-od/blob/main/github_aadhar_extraction_ner.ipynb">[link to the notebook]</a> <br>
 <h3>a. Training Data Preparation & Annotation</h3>
 <p>First, I applied tesseract to get a text from the images and then later used an open-source annotator to annotate the data. Below is the link for the same.</p>
 <a href="https://github.com/rumankhan1/ner-annotator">[link to the Github repo for the open-source annotation software]</a> <br>
