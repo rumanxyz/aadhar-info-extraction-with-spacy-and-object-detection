@@ -18,15 +18,15 @@
 <p>Then we'll update the model with our custom dataset. You can experiment with different iterations, drop rate, etc. </p>
 <h3>c. Performance with NER</h3>
 <p>Well, we had a tiny dataset, so we can't expect that outstanding performance. But the model is still doing reasonably well on detecting the Aadhar Number, Name and DOB from the Aadhar Card. We can expect a better performance from the model for sure if we train on a larger dataset. </p>
+
+
 <h2>2. Extract Aadhar info through Object Detection</h2>
-<p>I'm working on it and I'll update it soon</p>
 <h3>a.Training Data Preparation & Annotation</h3>
 <a href="https://github.com/rumankhan1/gov-id-info-extraction-with-spacy-od/blob/main/od_final_github.ipynb">[link to the notebook]</a> <br>
 <p>For the data annotation I used Roboflow. It’s easy to use and you can directly download data to your notebook.</p>
 <a href="https://app.roboflow.com/"></a><br>
 <p>I also did some data augmentation just to increase the sample size from 42 to 144. Performed basic augmentation steps like Rotate, Flip, etc. </p>
 <p>I also resigned the images to 416*416 pixels for the sake of fast training. </p>
-
 
 <h3>b.Model configure</h3>
 <p>Before writing the model configuration code we’ll add a train sample to the register via coco instance register module. It’s quite easier in that way. Also one thing to note down that I’m only using train data, there’s no validation data here.</p>
@@ -42,7 +42,7 @@
 <h3>d.Extracting info from Aadhar by OCR</h3>
 <p>Now we have an OD model. So the OD model will detect all the objects like Name, DOB, Aadhar Number, etc. Then from the box coordinate we’ll get the cropped images of these objects.</p>
 <p>To get text from cropped object images, I went for Tesseract OCR that works fairly well. So we’ll use that to convert the cropped image to the text and then later do a bit of text cleaning to return all the info. </p>
-<p>Note: I’ll make a new update. Planning  to build an API service around it. Stay tuned. </p>
+<h4>Note: I’ll make a new update. Planning  to build an API service around it. Stay tuned. </h4>
 
 
 
